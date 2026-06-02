@@ -1,0 +1,464 @@
+nohup: ignoring input
+[STAGE] 2026-04-23 00:49:47 START build experiment
+[CONFIG] 2026-04-23 00:49:47 paths graph_dir=/root/autodl-tmp/个人项目2/操作数据库/full_graph_export text_dir=/root/autodl-tmp/个人项目2/操作数据库/full_graph_export/text_chunks image_dir=/root/autodl-tmp/个人项目2/图片/64 local_model_root=/root/autodl-tmp/个人项目2/链路预测实验/local_models
+[CONFIG] 2026-04-23 00:49:47 models text_encoder=bert_frozen text_model=bert-base-uncased text_model_dir=/root/autodl-tmp/个人项目2/链路预测实验/local_models/text/bert-base-uncased image_encoder=resnet50 image_model=resnet50 image_model_dir=/root/autodl-tmp/个人项目2/链路预测实验/local_models/image/resnet50 kge_scorer=transe
+[CONFIG] 2026-04-23 00:49:47 cache_root=/root/autodl-tmp/个人项目2/边类型纯KGE/cache/full cache_session=20260423_004947_mm_kge_transe raw_cache_root=/root/autodl-tmp/个人项目2/边类型纯KGE/cache/full/shared_raw
+[DATA] 2026-04-23 00:49:49 catalog entities=1706516 art_entities=431773 chunks=85 triples=14297782 relations=353
+[DATA] 2026-04-23 00:49:49 splits train=11446322 val=1425779 test=1425681 sample_chunks=0
+[EVAL] 2026-04-23 00:49:49 validation_max_triples=50000 final_test_max_triples=FULL
+[STAGE] 2026-04-23 00:49:53 image index cache loaded: /root/autodl-tmp/个人项目2/边类型纯KGE/cache/full/image_index/image_index.pkl entries=430969
+[STAGE] 2026-04-23 00:49:54 DONE build experiment (6.94s)
+[CONFIG] 2026-04-23 00:49:54 training run_dir=/root/autodl-tmp/个人项目2/边类型纯KGE/runs/20260423_004947_mm_kge_transe cache_session=20260423_004947_mm_kge_transe
+[STAGE] 2026-04-23 00:49:54 START prebuild raw caches
+[STAGE] 2026-04-23 00:50:03 text cache prebuild done missing=0
+[STAGE] 2026-04-23 00:50:31 image raw cache prebuild done missing=416457 loaded=0
+[STAGE] 2026-04-23 00:50:31 DONE prebuild raw caches (36.88s)
+[STAGE] 2026-04-23 00:50:31 START train
+[STAGE] 2026-04-23 00:50:31 epoch start epoch=1/3 steps_per_epoch=22357 global_step=0/67071
+[TRAIN] 2026-04-23 00:50:32 step=1/67071 (0.00%) epoch=1/3 epoch_step=1/22357 (0.00%) loss=0.817270 lr=4.00001e-05 elapsed=00:01 eta=25:11:44 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:32 step=2/67071 (0.00%) epoch=1/3 epoch_step=2/22357 (0.01%) loss=0.815410 lr=4.00002e-05 elapsed=00:01 eta=13:57:09 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:32 step=3/67071 (0.00%) epoch=1/3 epoch_step=3/22357 (0.01%) loss=0.813792 lr=4.00005e-05 elapsed=00:02 eta=10:06:13 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:32 step=4/67071 (0.01%) epoch=1/3 epoch_step=4/22357 (0.02%) loss=0.810447 lr=4.00008e-05 elapsed=00:02 eta=08:11:44 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:32 step=5/67071 (0.01%) epoch=1/3 epoch_step=5/22357 (0.02%) loss=0.808223 lr=4.00013e-05 elapsed=00:02 eta=07:00:29 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:33 step=10/67071 (0.01%) epoch=1/3 epoch_step=10/22357 (0.04%) loss=0.802836 lr=4.00053e-05 elapsed=00:02 eta=04:37:46 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:34 step=20/67071 (0.03%) epoch=1/3 epoch_step=20/22357 (0.09%) loss=0.796324 lr=4.00211e-05 elapsed=00:04 eta=03:28:58 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:35 step=30/67071 (0.04%) epoch=1/3 epoch_step=30/22357 (0.13%) loss=0.793395 lr=4.00474e-05 elapsed=00:05 eta=03:03:20 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:37 step=40/67071 (0.06%) epoch=1/3 epoch_step=40/22357 (0.18%) loss=0.790840 lr=4.00843e-05 elapsed=00:06 eta=02:52:23 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:38 step=50/67071 (0.07%) epoch=1/3 epoch_step=50/22357 (0.22%) loss=0.788043 lr=4.01317e-05 elapsed=00:08 eta=02:49:45 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:39 step=60/67071 (0.09%) epoch=1/3 epoch_step=60/22357 (0.27%) loss=0.786039 lr=4.01896e-05 elapsed=00:09 eta=02:44:08 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:41 step=70/67071 (0.10%) epoch=1/3 epoch_step=70/22357 (0.31%) loss=0.785420 lr=4.02581e-05 elapsed=00:10 eta=02:40:05 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:42 step=80/67071 (0.12%) epoch=1/3 epoch_step=80/22357 (0.36%) loss=0.782331 lr=4.03371e-05 elapsed=00:11 eta=02:37:01 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:43 step=90/67071 (0.13%) epoch=1/3 epoch_step=90/22357 (0.40%) loss=0.781603 lr=4.04266e-05 elapsed=00:12 eta=02:33:59 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:45 step=100/67071 (0.15%) epoch=1/3 epoch_step=100/22357 (0.45%) loss=0.779883 lr=4.05266e-05 elapsed=00:14 eta=02:37:47 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:46 step=110/67071 (0.16%) epoch=1/3 epoch_step=110/22357 (0.49%) loss=0.779206 lr=4.06372e-05 elapsed=00:15 eta=02:35:24 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:47 step=120/67071 (0.18%) epoch=1/3 epoch_step=120/22357 (0.54%) loss=0.776005 lr=4.07583e-05 elapsed=00:16 eta=02:33:10 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:48 step=130/67071 (0.19%) epoch=1/3 epoch_step=130/22357 (0.58%) loss=0.774976 lr=4.08899e-05 elapsed=00:18 eta=02:31:03 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:50 step=140/67071 (0.21%) epoch=1/3 epoch_step=140/22357 (0.63%) loss=0.774411 lr=4.1032e-05 elapsed=00:19 eta=02:31:30 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:51 step=150/67071 (0.22%) epoch=1/3 epoch_step=150/22357 (0.67%) loss=0.772481 lr=4.11846e-05 elapsed=00:20 eta=02:30:04 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:52 step=160/67071 (0.24%) epoch=1/3 epoch_step=160/22357 (0.72%) loss=0.769572 lr=4.13477e-05 elapsed=00:21 eta=02:28:37 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:53 step=170/67071 (0.25%) epoch=1/3 epoch_step=170/22357 (0.76%) loss=0.767900 lr=4.15214e-05 elapsed=00:22 eta=02:27:29 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:54 step=180/67071 (0.27%) epoch=1/3 epoch_step=180/22357 (0.81%) loss=0.767349 lr=4.17055e-05 elapsed=00:24 eta=02:27:02 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:56 step=190/67071 (0.28%) epoch=1/3 epoch_step=190/22357 (0.85%) loss=0.765541 lr=4.19002e-05 elapsed=00:25 eta=02:26:19 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:58 step=200/67071 (0.30%) epoch=1/3 epoch_step=200/22357 (0.89%) loss=0.763301 lr=4.21053e-05 elapsed=00:27 eta=02:32:10 val_mrr=NA
+[TRAIN] 2026-04-23 00:50:59 step=210/67071 (0.31%) epoch=1/3 epoch_step=210/22357 (0.94%) loss=0.763069 lr=4.23209e-05 elapsed=00:29 eta=02:31:15 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:00 step=220/67071 (0.33%) epoch=1/3 epoch_step=220/22357 (0.98%) loss=0.759032 lr=4.2547e-05 elapsed=00:30 eta=02:30:23 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:02 step=230/67071 (0.34%) epoch=1/3 epoch_step=230/22357 (1.03%) loss=0.755252 lr=4.27836e-05 elapsed=00:31 eta=02:30:48 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:03 step=240/67071 (0.36%) epoch=1/3 epoch_step=240/22357 (1.07%) loss=0.755789 lr=4.30307e-05 elapsed=00:32 eta=02:30:02 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:04 step=250/67071 (0.37%) epoch=1/3 epoch_step=250/22357 (1.12%) loss=0.752609 lr=4.32882e-05 elapsed=00:34 eta=02:29:17 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:05 step=260/67071 (0.39%) epoch=1/3 epoch_step=260/22357 (1.16%) loss=0.750739 lr=4.35562e-05 elapsed=00:35 eta=02:28:38 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:06 step=270/67071 (0.40%) epoch=1/3 epoch_step=270/22357 (1.21%) loss=0.752446 lr=4.38346e-05 elapsed=00:36 eta=02:27:55 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:08 step=280/67071 (0.42%) epoch=1/3 epoch_step=280/22357 (1.25%) loss=0.747025 lr=4.41235e-05 elapsed=00:37 eta=02:27:17 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:09 step=290/67071 (0.43%) epoch=1/3 epoch_step=290/22357 (1.30%) loss=0.745343 lr=4.44228e-05 elapsed=00:38 eta=02:26:39 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:11 step=300/67071 (0.45%) epoch=1/3 epoch_step=300/22357 (1.34%) loss=0.743122 lr=4.47326e-05 elapsed=00:40 eta=02:30:10 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:12 step=310/67071 (0.46%) epoch=1/3 epoch_step=310/22357 (1.39%) loss=0.744161 lr=4.50528e-05 elapsed=00:42 eta=02:29:30 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:14 step=320/67071 (0.48%) epoch=1/3 epoch_step=320/22357 (1.43%) loss=0.740620 lr=4.53834e-05 elapsed=00:43 eta=02:29:45 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:15 step=330/67071 (0.49%) epoch=1/3 epoch_step=330/22357 (1.48%) loss=0.740798 lr=4.57244e-05 elapsed=00:44 eta=02:29:10 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:16 step=340/67071 (0.51%) epoch=1/3 epoch_step=340/22357 (1.52%) loss=0.734545 lr=4.60759e-05 elapsed=00:45 eta=02:28:32 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:17 step=350/67071 (0.52%) epoch=1/3 epoch_step=350/22357 (1.57%) loss=0.738461 lr=4.64377e-05 elapsed=00:47 eta=02:27:59 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:18 step=360/67071 (0.54%) epoch=1/3 epoch_step=360/22357 (1.61%) loss=0.735151 lr=4.681e-05 elapsed=00:48 eta=02:27:22 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:19 step=370/67071 (0.55%) epoch=1/3 epoch_step=370/22357 (1.65%) loss=0.731562 lr=4.71926e-05 elapsed=00:49 eta=02:26:49 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:21 step=380/67071 (0.57%) epoch=1/3 epoch_step=380/22357 (1.70%) loss=0.730460 lr=4.75856e-05 elapsed=00:50 eta=02:26:24 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:22 step=390/67071 (0.58%) epoch=1/3 epoch_step=390/22357 (1.74%) loss=0.727105 lr=4.7989e-05 elapsed=00:51 eta=02:26:06 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:24 step=400/67071 (0.60%) epoch=1/3 epoch_step=400/22357 (1.79%) loss=0.720503 lr=4.84027e-05 elapsed=00:54 eta=02:28:49 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:26 step=410/67071 (0.61%) epoch=1/3 epoch_step=410/22357 (1.83%) loss=0.720197 lr=4.88268e-05 elapsed=00:55 eta=02:29:03 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:27 step=420/67071 (0.63%) epoch=1/3 epoch_step=420/22357 (1.88%) loss=0.723126 lr=4.92612e-05 elapsed=00:56 eta=02:28:38 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:28 step=430/67071 (0.64%) epoch=1/3 epoch_step=430/22357 (1.92%) loss=0.722489 lr=4.9706e-05 elapsed=00:57 eta=02:28:13 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:29 step=440/67071 (0.66%) epoch=1/3 epoch_step=440/22357 (1.97%) loss=0.718410 lr=5.0161e-05 elapsed=00:59 eta=02:27:47 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:30 step=450/67071 (0.67%) epoch=1/3 epoch_step=450/22357 (2.01%) loss=0.713643 lr=5.06264e-05 elapsed=01:00 eta=02:27:24 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:31 step=460/67071 (0.69%) epoch=1/3 epoch_step=460/22357 (2.06%) loss=0.713835 lr=5.11021e-05 elapsed=01:01 eta=02:27:01 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:33 step=470/67071 (0.70%) epoch=1/3 epoch_step=470/22357 (2.10%) loss=0.717899 lr=5.15881e-05 elapsed=01:02 eta=02:26:34 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:34 step=480/67071 (0.72%) epoch=1/3 epoch_step=480/22357 (2.15%) loss=0.710379 lr=5.20843e-05 elapsed=01:03 eta=02:26:13 val_mrr=NA
+[TRAIN] 2026-04-23 00:51:35 step=490/67071 (0.73%) epoch=1/3 epoch_step=490/22357 (2.19%) loss=0.709751 lr=5.25909e-05 elapsed=01:04 eta=02:25:54 val_mrr=NA
+[STAGE] 2026-04-23 00:51:37 val prep subsets global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:51:37 val prep negatives global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:51:37 val prep unique_entities=136259
+[STAGE] 2026-04-23 00:51:40 val prep entity_bank_ready unique_entities=136259 emb_dim=256
+[STAGE] 2026-04-23 00:51:40 val start step=500 epoch=0 task=relation_ranking subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:51:41 val start step=500 epoch=0 task=triple_scoring subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:51:41 val start step=500 epoch=0 task=relation_ranking subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:51:41 val start step=500 epoch=0 task=triple_scoring subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:51:41 val start step=500 epoch=0 task=relation_ranking subset=art_any triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:51:42 val start step=500 epoch=0 task=triple_scoring subset=art_any triples=50000 batches=98 eval_batch_size=512
+[VAL] 2026-04-23 00:51:42 step=500 epoch=0 mrr=0.655879 aucpr=0.848178 art_art_mrr=0.205168 art_art_aucpr=0.574221 art_any_mrr=0.655880 art_any_aucpr=0.637073
+[TRAIN] 2026-04-23 00:51:44 step=500/67071 (0.75%) epoch=1/3 epoch_step=500/22357 (2.24%) loss=0.710475 lr=5.31076e-05 elapsed=01:13 eta=02:42:11 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:51:45 step=510/67071 (0.76%) epoch=1/3 epoch_step=510/22357 (2.28%) loss=0.700475 lr=5.36347e-05 elapsed=01:14 eta=02:41:33 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:51:46 step=520/67071 (0.78%) epoch=1/3 epoch_step=520/22357 (2.33%) loss=0.701126 lr=5.41719e-05 elapsed=01:15 eta=02:40:57 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:51:47 step=530/67071 (0.79%) epoch=1/3 epoch_step=530/22357 (2.37%) loss=0.707109 lr=5.47194e-05 elapsed=01:17 eta=02:40:20 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:51:48 step=540/67071 (0.81%) epoch=1/3 epoch_step=540/22357 (2.42%) loss=0.699490 lr=5.52771e-05 elapsed=01:18 eta=02:40:00 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:51:50 step=550/67071 (0.82%) epoch=1/3 epoch_step=550/22357 (2.46%) loss=0.704811 lr=5.5845e-05 elapsed=01:19 eta=02:39:29 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:51:51 step=560/67071 (0.83%) epoch=1/3 epoch_step=560/22357 (2.50%) loss=0.693903 lr=5.64231e-05 elapsed=01:20 eta=02:39:04 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:51:52 step=570/67071 (0.85%) epoch=1/3 epoch_step=570/22357 (2.55%) loss=0.699069 lr=5.70113e-05 elapsed=01:22 eta=02:39:04 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:51:54 step=580/67071 (0.86%) epoch=1/3 epoch_step=580/22357 (2.59%) loss=0.693451 lr=5.76098e-05 elapsed=01:23 eta=02:38:33 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:51:55 step=590/67071 (0.88%) epoch=1/3 epoch_step=590/22357 (2.64%) loss=0.698296 lr=5.82183e-05 elapsed=01:24 eta=02:38:03 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:51:57 step=600/67071 (0.89%) epoch=1/3 epoch_step=600/22357 (2.68%) loss=0.698855 lr=5.8837e-05 elapsed=01:26 eta=02:39:40 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:51:58 step=610/67071 (0.91%) epoch=1/3 epoch_step=610/22357 (2.73%) loss=0.694193 lr=5.94658e-05 elapsed=01:28 eta=02:39:09 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:51:59 step=620/67071 (0.92%) epoch=1/3 epoch_step=620/22357 (2.77%) loss=0.684746 lr=6.01048e-05 elapsed=01:29 eta=02:38:38 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:01 step=630/67071 (0.94%) epoch=1/3 epoch_step=630/22357 (2.82%) loss=0.690042 lr=6.07538e-05 elapsed=01:30 eta=02:38:11 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:02 step=640/67071 (0.95%) epoch=1/3 epoch_step=640/22357 (2.86%) loss=0.691965 lr=6.14129e-05 elapsed=01:31 eta=02:37:43 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:03 step=650/67071 (0.97%) epoch=1/3 epoch_step=650/22357 (2.91%) loss=0.686555 lr=6.2082e-05 elapsed=01:32 eta=02:37:14 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:04 step=660/67071 (0.98%) epoch=1/3 epoch_step=660/22357 (2.95%) loss=0.689347 lr=6.27613e-05 elapsed=01:34 eta=02:37:11 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:05 step=670/67071 (1.00%) epoch=1/3 epoch_step=670/22357 (3.00%) loss=0.683836 lr=6.34505e-05 elapsed=01:35 eta=02:36:44 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:07 step=680/67071 (1.01%) epoch=1/3 epoch_step=680/22357 (3.04%) loss=0.684885 lr=6.41498e-05 elapsed=01:36 eta=02:36:19 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:08 step=690/67071 (1.03%) epoch=1/3 epoch_step=690/22357 (3.09%) loss=0.686505 lr=6.4859e-05 elapsed=01:37 eta=02:35:56 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:11 step=700/67071 (1.04%) epoch=1/3 epoch_step=700/22357 (3.13%) loss=0.681791 lr=6.55783e-05 elapsed=01:40 eta=02:37:56 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:12 step=710/67071 (1.06%) epoch=1/3 epoch_step=710/22357 (3.18%) loss=0.674826 lr=6.63075e-05 elapsed=01:41 eta=02:37:30 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:13 step=720/67071 (1.07%) epoch=1/3 epoch_step=720/22357 (3.22%) loss=0.670383 lr=6.70467e-05 elapsed=01:42 eta=02:37:02 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:14 step=730/67071 (1.09%) epoch=1/3 epoch_step=730/22357 (3.27%) loss=0.664451 lr=6.77958e-05 elapsed=01:43 eta=02:36:36 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:15 step=740/67071 (1.10%) epoch=1/3 epoch_step=740/22357 (3.31%) loss=0.679875 lr=6.85549e-05 elapsed=01:45 eta=02:36:14 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:17 step=750/67071 (1.12%) epoch=1/3 epoch_step=750/22357 (3.35%) loss=0.670026 lr=6.93239e-05 elapsed=01:46 eta=02:36:13 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:18 step=760/67071 (1.13%) epoch=1/3 epoch_step=760/22357 (3.40%) loss=0.682875 lr=7.01027e-05 elapsed=01:47 eta=02:35:49 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:19 step=770/67071 (1.15%) epoch=1/3 epoch_step=770/22357 (3.44%) loss=0.666523 lr=7.08914e-05 elapsed=01:48 eta=02:35:25 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:20 step=780/67071 (1.16%) epoch=1/3 epoch_step=780/22357 (3.49%) loss=0.659973 lr=7.169e-05 elapsed=01:49 eta=02:35:02 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:21 step=790/67071 (1.18%) epoch=1/3 epoch_step=790/22357 (3.53%) loss=0.673733 lr=7.24984e-05 elapsed=01:51 eta=02:34:40 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:23 step=800/67071 (1.19%) epoch=1/3 epoch_step=800/22357 (3.58%) loss=0.660040 lr=7.33167e-05 elapsed=01:53 eta=02:35:51 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:25 step=810/67071 (1.21%) epoch=1/3 epoch_step=810/22357 (3.62%) loss=0.656379 lr=7.41447e-05 elapsed=01:54 eta=02:35:30 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:26 step=820/67071 (1.22%) epoch=1/3 epoch_step=820/22357 (3.67%) loss=0.669174 lr=7.49825e-05 elapsed=01:55 eta=02:35:06 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:27 step=830/67071 (1.24%) epoch=1/3 epoch_step=830/22357 (3.71%) loss=0.656853 lr=7.58301e-05 elapsed=01:56 eta=02:34:42 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:28 step=840/67071 (1.25%) epoch=1/3 epoch_step=840/22357 (3.76%) loss=0.663579 lr=7.66875e-05 elapsed=01:58 eta=02:34:38 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:29 step=850/67071 (1.27%) epoch=1/3 epoch_step=850/22357 (3.80%) loss=0.664394 lr=7.75546e-05 elapsed=01:59 eta=02:34:18 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:31 step=860/67071 (1.28%) epoch=1/3 epoch_step=860/22357 (3.85%) loss=0.666762 lr=7.84313e-05 elapsed=02:00 eta=02:33:59 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:32 step=870/67071 (1.30%) epoch=1/3 epoch_step=870/22357 (3.89%) loss=0.661942 lr=7.93178e-05 elapsed=02:01 eta=02:33:40 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:33 step=880/67071 (1.31%) epoch=1/3 epoch_step=880/22357 (3.94%) loss=0.655859 lr=8.0214e-05 elapsed=02:02 eta=02:33:21 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:34 step=890/67071 (1.33%) epoch=1/3 epoch_step=890/22357 (3.98%) loss=0.650267 lr=8.11198e-05 elapsed=02:03 eta=02:33:02 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:36 step=900/67071 (1.34%) epoch=1/3 epoch_step=900/22357 (4.03%) loss=0.656424 lr=8.20352e-05 elapsed=02:06 eta=02:34:14 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:38 step=910/67071 (1.36%) epoch=1/3 epoch_step=910/22357 (4.07%) loss=0.658094 lr=8.29602e-05 elapsed=02:07 eta=02:33:54 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:39 step=920/67071 (1.37%) epoch=1/3 epoch_step=920/22357 (4.12%) loss=0.653892 lr=8.38948e-05 elapsed=02:08 eta=02:33:34 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:40 step=930/67071 (1.39%) epoch=1/3 epoch_step=930/22357 (4.16%) loss=0.652686 lr=8.4839e-05 elapsed=02:10 eta=02:33:33 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:41 step=940/67071 (1.40%) epoch=1/3 epoch_step=940/22357 (4.20%) loss=0.652067 lr=8.57928e-05 elapsed=02:11 eta=02:33:15 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:42 step=950/67071 (1.42%) epoch=1/3 epoch_step=950/22357 (4.25%) loss=0.649204 lr=8.67561e-05 elapsed=02:12 eta=02:32:56 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:44 step=960/67071 (1.43%) epoch=1/3 epoch_step=960/22357 (4.29%) loss=0.649549 lr=8.77289e-05 elapsed=02:13 eta=02:32:39 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:45 step=970/67071 (1.45%) epoch=1/3 epoch_step=970/22357 (4.34%) loss=0.644032 lr=8.87111e-05 elapsed=02:14 eta=02:32:20 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:46 step=980/67071 (1.46%) epoch=1/3 epoch_step=980/22357 (4.38%) loss=0.647978 lr=8.97029e-05 elapsed=02:15 eta=02:32:03 val_mrr=0.655879
+[TRAIN] 2026-04-23 00:52:47 step=990/67071 (1.48%) epoch=1/3 epoch_step=990/22357 (4.43%) loss=0.647402 lr=9.07041e-05 elapsed=02:16 eta=02:31:47 val_mrr=0.655879
+[STAGE] 2026-04-23 00:52:48 val prep subsets global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:52:49 val prep negatives global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:52:49 val prep unique_entities=136196
+[STAGE] 2026-04-23 00:52:52 val prep entity_bank_ready unique_entities=136196 emb_dim=256
+[STAGE] 2026-04-23 00:52:52 val start step=1000 epoch=0 task=relation_ranking subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:52:53 val start step=1000 epoch=0 task=triple_scoring subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:52:53 val start step=1000 epoch=0 task=relation_ranking subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:52:53 val start step=1000 epoch=0 task=triple_scoring subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:52:53 val start step=1000 epoch=0 task=relation_ranking subset=art_any triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:52:54 val start step=1000 epoch=0 task=triple_scoring subset=art_any triples=50000 batches=98 eval_batch_size=512
+[VAL] 2026-04-23 00:52:54 step=1000 epoch=0 mrr=0.790840 aucpr=0.883080 art_art_mrr=0.391966 art_art_aucpr=0.639524 art_any_mrr=0.790841 art_any_aucpr=0.684834
+[TRAIN] 2026-04-23 00:52:56 step=1000/67071 (1.49%) epoch=1/3 epoch_step=1000/22357 (4.47%) loss=0.641528 lr=9.17147e-05 elapsed=02:26 eta=02:40:15 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:52:57 step=1010/67071 (1.51%) epoch=1/3 epoch_step=1010/22357 (4.52%) loss=0.642547 lr=9.27347e-05 elapsed=02:27 eta=02:39:54 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:52:58 step=1020/67071 (1.52%) epoch=1/3 epoch_step=1020/22357 (4.56%) loss=0.639122 lr=9.37641e-05 elapsed=02:28 eta=02:39:33 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:00 step=1030/67071 (1.54%) epoch=1/3 epoch_step=1030/22357 (4.61%) loss=0.644142 lr=9.48028e-05 elapsed=02:29 eta=02:39:14 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:01 step=1040/67071 (1.55%) epoch=1/3 epoch_step=1040/22357 (4.65%) loss=0.643901 lr=9.58509e-05 elapsed=02:30 eta=02:38:55 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:02 step=1050/67071 (1.57%) epoch=1/3 epoch_step=1050/22357 (4.70%) loss=0.638261 lr=9.69082e-05 elapsed=02:31 eta=02:38:40 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:03 step=1060/67071 (1.58%) epoch=1/3 epoch_step=1060/22357 (4.74%) loss=0.635106 lr=9.79749e-05 elapsed=02:33 eta=02:38:22 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:04 step=1070/67071 (1.60%) epoch=1/3 epoch_step=1070/22357 (4.79%) loss=0.646303 lr=9.90508e-05 elapsed=02:34 eta=02:38:06 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:06 step=1080/67071 (1.61%) epoch=1/3 epoch_step=1080/22357 (4.83%) loss=0.639173 lr=0.000100136 elapsed=02:35 eta=02:37:50 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:07 step=1090/67071 (1.63%) epoch=1/3 epoch_step=1090/22357 (4.88%) loss=0.635556 lr=0.00010123 elapsed=02:36 eta=02:37:33 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:10 step=1100/67071 (1.64%) epoch=1/3 epoch_step=1100/22357 (4.92%) loss=0.632215 lr=0.000102334 elapsed=02:39 eta=02:39:15 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:11 step=1110/67071 (1.65%) epoch=1/3 epoch_step=1110/22357 (4.96%) loss=0.634243 lr=0.000103447 elapsed=02:40 eta=02:38:57 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:12 step=1120/67071 (1.67%) epoch=1/3 epoch_step=1120/22357 (5.01%) loss=0.631299 lr=0.000104569 elapsed=02:42 eta=02:38:39 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:13 step=1130/67071 (1.68%) epoch=1/3 epoch_step=1130/22357 (5.05%) loss=0.631985 lr=0.0001057 elapsed=02:43 eta=02:38:19 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:14 step=1140/67071 (1.70%) epoch=1/3 epoch_step=1140/22357 (5.10%) loss=0.630729 lr=0.00010684 elapsed=02:44 eta=02:38:01 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:16 step=1150/67071 (1.71%) epoch=1/3 epoch_step=1150/22357 (5.14%) loss=0.619742 lr=0.000107989 elapsed=02:45 eta=02:37:43 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:17 step=1160/67071 (1.73%) epoch=1/3 epoch_step=1160/22357 (5.19%) loss=0.628086 lr=0.000109147 elapsed=02:46 eta=02:37:24 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:18 step=1170/67071 (1.74%) epoch=1/3 epoch_step=1170/22357 (5.23%) loss=0.622868 lr=0.000110314 elapsed=02:47 eta=02:37:06 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:19 step=1180/67071 (1.76%) epoch=1/3 epoch_step=1180/22357 (5.28%) loss=0.619162 lr=0.00011149 elapsed=02:48 eta=02:36:49 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:20 step=1190/67071 (1.77%) epoch=1/3 epoch_step=1190/22357 (5.32%) loss=0.629721 lr=0.000112676 elapsed=02:50 eta=02:36:45 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:23 step=1200/67071 (1.79%) epoch=1/3 epoch_step=1200/22357 (5.37%) loss=0.613367 lr=0.00011387 elapsed=02:52 eta=02:37:33 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:24 step=1210/67071 (1.80%) epoch=1/3 epoch_step=1210/22357 (5.41%) loss=0.624205 lr=0.000115073 elapsed=02:53 eta=02:37:17 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:25 step=1220/67071 (1.82%) epoch=1/3 epoch_step=1220/22357 (5.46%) loss=0.619970 lr=0.000116285 elapsed=02:54 eta=02:36:59 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:26 step=1230/67071 (1.83%) epoch=1/3 epoch_step=1230/22357 (5.50%) loss=0.618047 lr=0.000117505 elapsed=02:56 eta=02:36:41 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:27 step=1240/67071 (1.85%) epoch=1/3 epoch_step=1240/22357 (5.55%) loss=0.620225 lr=0.000118735 elapsed=02:57 eta=02:36:26 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:29 step=1250/67071 (1.86%) epoch=1/3 epoch_step=1250/22357 (5.59%) loss=0.617672 lr=0.000119973 elapsed=02:58 eta=02:36:11 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:30 step=1260/67071 (1.88%) epoch=1/3 epoch_step=1260/22357 (5.64%) loss=0.620014 lr=0.00012122 elapsed=02:59 eta=02:35:56 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:31 step=1270/67071 (1.89%) epoch=1/3 epoch_step=1270/22357 (5.68%) loss=0.621810 lr=0.000122476 elapsed=03:00 eta=02:35:43 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:32 step=1280/67071 (1.91%) epoch=1/3 epoch_step=1280/22357 (5.73%) loss=0.619318 lr=0.000123741 elapsed=03:02 eta=02:35:41 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:34 step=1290/67071 (1.92%) epoch=1/3 epoch_step=1290/22357 (5.77%) loss=0.609714 lr=0.000125014 elapsed=03:03 eta=02:35:29 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:36 step=1300/67071 (1.94%) epoch=1/3 epoch_step=1300/22357 (5.81%) loss=0.604482 lr=0.000126296 elapsed=03:05 eta=02:36:15 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:37 step=1310/67071 (1.95%) epoch=1/3 epoch_step=1310/22357 (5.86%) loss=0.620558 lr=0.000127587 elapsed=03:06 eta=02:36:01 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:38 step=1320/67071 (1.97%) epoch=1/3 epoch_step=1320/22357 (5.90%) loss=0.609358 lr=0.000128886 elapsed=03:08 eta=02:35:48 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:39 step=1330/67071 (1.98%) epoch=1/3 epoch_step=1330/22357 (5.95%) loss=0.607838 lr=0.000130194 elapsed=03:09 eta=02:35:34 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:41 step=1340/67071 (2.00%) epoch=1/3 epoch_step=1340/22357 (5.99%) loss=0.608713 lr=0.000131511 elapsed=03:10 eta=02:35:20 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:42 step=1350/67071 (2.01%) epoch=1/3 epoch_step=1350/22357 (6.04%) loss=0.607469 lr=0.000132836 elapsed=03:11 eta=02:35:08 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:43 step=1360/67071 (2.03%) epoch=1/3 epoch_step=1360/22357 (6.08%) loss=0.613994 lr=0.000134169 elapsed=03:12 eta=02:34:55 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:44 step=1370/67071 (2.04%) epoch=1/3 epoch_step=1370/22357 (6.13%) loss=0.602755 lr=0.000135511 elapsed=03:14 eta=02:34:53 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:46 step=1380/67071 (2.06%) epoch=1/3 epoch_step=1380/22357 (6.17%) loss=0.613263 lr=0.000136861 elapsed=03:15 eta=02:34:40 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:47 step=1390/67071 (2.07%) epoch=1/3 epoch_step=1390/22357 (6.22%) loss=0.601905 lr=0.00013822 elapsed=03:16 eta=02:34:26 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:49 step=1400/67071 (2.09%) epoch=1/3 epoch_step=1400/22357 (6.26%) loss=0.608655 lr=0.000139587 elapsed=03:19 eta=02:35:24 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:51 step=1410/67071 (2.10%) epoch=1/3 epoch_step=1410/22357 (6.31%) loss=0.603801 lr=0.000140963 elapsed=03:20 eta=02:35:12 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:52 step=1420/67071 (2.12%) epoch=1/3 epoch_step=1420/22357 (6.35%) loss=0.616049 lr=0.000142346 elapsed=03:21 eta=02:34:59 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:53 step=1430/67071 (2.13%) epoch=1/3 epoch_step=1430/22357 (6.40%) loss=0.600202 lr=0.000143739 elapsed=03:22 eta=02:34:46 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:54 step=1440/67071 (2.15%) epoch=1/3 epoch_step=1440/22357 (6.44%) loss=0.610103 lr=0.000145139 elapsed=03:23 eta=02:34:33 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:55 step=1450/67071 (2.16%) epoch=1/3 epoch_step=1450/22357 (6.49%) loss=0.610834 lr=0.000146547 elapsed=03:25 eta=02:34:21 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:57 step=1460/67071 (2.18%) epoch=1/3 epoch_step=1460/22357 (6.53%) loss=0.608309 lr=0.000147964 elapsed=03:26 eta=02:34:20 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:58 step=1470/67071 (2.19%) epoch=1/3 epoch_step=1470/22357 (6.58%) loss=0.601771 lr=0.000149389 elapsed=03:27 eta=02:34:09 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:53:59 step=1480/67071 (2.21%) epoch=1/3 epoch_step=1480/22357 (6.62%) loss=0.601185 lr=0.000150822 elapsed=03:28 eta=02:33:57 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:00 step=1490/67071 (2.22%) epoch=1/3 epoch_step=1490/22357 (6.66%) loss=0.596691 lr=0.000152263 elapsed=03:30 eta=02:33:45 val_mrr=0.790840
+[STAGE] 2026-04-23 00:54:02 val prep subsets global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:54:02 val prep negatives global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:54:02 val prep unique_entities=136219
+[STAGE] 2026-04-23 00:54:05 val prep entity_bank_ready unique_entities=136219 emb_dim=256
+[STAGE] 2026-04-23 00:54:05 val start step=1500 epoch=0 task=relation_ranking subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:54:06 val start step=1500 epoch=0 task=triple_scoring subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:54:06 val start step=1500 epoch=0 task=relation_ranking subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:54:06 val start step=1500 epoch=0 task=triple_scoring subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:54:06 val start step=1500 epoch=0 task=relation_ranking subset=art_any triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:54:07 val start step=1500 epoch=0 task=triple_scoring subset=art_any triples=50000 batches=98 eval_batch_size=512
+[VAL] 2026-04-23 00:54:07 step=1500 epoch=0 mrr=0.771112 aucpr=0.884015 art_art_mrr=0.310265 art_art_aucpr=0.590192 art_any_mrr=0.771115 art_any_aucpr=0.687708
+[TRAIN] 2026-04-23 00:54:08 step=1500/67071 (2.24%) epoch=1/3 epoch_step=1500/22357 (6.71%) loss=0.608331 lr=0.000153713 elapsed=03:38 eta=02:38:32 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:09 step=1510/67071 (2.25%) epoch=1/3 epoch_step=1510/22357 (6.75%) loss=0.603356 lr=0.00015517 elapsed=03:39 eta=02:38:19 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:11 step=1520/67071 (2.27%) epoch=1/3 epoch_step=1520/22357 (6.80%) loss=0.597821 lr=0.000156635 elapsed=03:40 eta=02:38:06 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:12 step=1530/67071 (2.28%) epoch=1/3 epoch_step=1530/22357 (6.84%) loss=0.599966 lr=0.000158108 elapsed=03:41 eta=02:38:05 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:13 step=1540/67071 (2.30%) epoch=1/3 epoch_step=1540/22357 (6.89%) loss=0.601576 lr=0.00015959 elapsed=03:43 eta=02:37:51 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:14 step=1550/67071 (2.31%) epoch=1/3 epoch_step=1550/22357 (6.93%) loss=0.595629 lr=0.000161079 elapsed=03:44 eta=02:37:39 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:16 step=1560/67071 (2.33%) epoch=1/3 epoch_step=1560/22357 (6.98%) loss=0.603817 lr=0.000162576 elapsed=03:45 eta=02:37:27 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:17 step=1570/67071 (2.34%) epoch=1/3 epoch_step=1570/22357 (7.02%) loss=0.604550 lr=0.00016408 elapsed=03:46 eta=02:37:17 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:18 step=1580/67071 (2.36%) epoch=1/3 epoch_step=1580/22357 (7.07%) loss=0.594215 lr=0.000165593 elapsed=03:47 eta=02:37:07 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:19 step=1590/67071 (2.37%) epoch=1/3 epoch_step=1590/22357 (7.11%) loss=0.585643 lr=0.000167114 elapsed=03:49 eta=02:36:57 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:22 step=1600/67071 (2.39%) epoch=1/3 epoch_step=1600/22357 (7.16%) loss=0.598865 lr=0.000168642 elapsed=03:51 eta=02:37:33 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:23 step=1610/67071 (2.40%) epoch=1/3 epoch_step=1610/22357 (7.20%) loss=0.597041 lr=0.000170178 elapsed=03:52 eta=02:37:21 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:24 step=1620/67071 (2.42%) epoch=1/3 epoch_step=1620/22357 (7.25%) loss=0.598200 lr=0.000171721 elapsed=03:54 eta=02:37:19 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:25 step=1630/67071 (2.43%) epoch=1/3 epoch_step=1630/22357 (7.29%) loss=0.587583 lr=0.000173272 elapsed=03:55 eta=02:37:06 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:26 step=1640/67071 (2.45%) epoch=1/3 epoch_step=1640/22357 (7.34%) loss=0.589446 lr=0.000174831 elapsed=03:56 eta=02:36:53 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:28 step=1650/67071 (2.46%) epoch=1/3 epoch_step=1650/22357 (7.38%) loss=0.583040 lr=0.000176397 elapsed=03:57 eta=02:36:39 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:29 step=1660/67071 (2.47%) epoch=1/3 epoch_step=1660/22357 (7.42%) loss=0.586984 lr=0.000177971 elapsed=03:58 eta=02:36:24 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:30 step=1670/67071 (2.49%) epoch=1/3 epoch_step=1670/22357 (7.47%) loss=0.600759 lr=0.000179553 elapsed=03:59 eta=02:36:10 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:31 step=1680/67071 (2.50%) epoch=1/3 epoch_step=1680/22357 (7.51%) loss=0.594902 lr=0.000181142 elapsed=04:00 eta=02:35:56 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:32 step=1690/67071 (2.52%) epoch=1/3 epoch_step=1690/22357 (7.56%) loss=0.597647 lr=0.000182738 elapsed=04:02 eta=02:35:43 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:34 step=1700/67071 (2.53%) epoch=1/3 epoch_step=1700/22357 (7.60%) loss=0.602411 lr=0.000184342 elapsed=04:04 eta=02:36:12 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:36 step=1710/67071 (2.55%) epoch=1/3 epoch_step=1710/22357 (7.65%) loss=0.582348 lr=0.000185953 elapsed=04:05 eta=02:36:09 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:37 step=1720/67071 (2.56%) epoch=1/3 epoch_step=1720/22357 (7.69%) loss=0.596032 lr=0.000187571 elapsed=04:06 eta=02:35:58 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:38 step=1730/67071 (2.58%) epoch=1/3 epoch_step=1730/22357 (7.74%) loss=0.602032 lr=0.000189197 elapsed=04:07 eta=02:35:46 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:39 step=1740/67071 (2.59%) epoch=1/3 epoch_step=1740/22357 (7.78%) loss=0.592879 lr=0.00019083 elapsed=04:09 eta=02:35:32 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:40 step=1750/67071 (2.61%) epoch=1/3 epoch_step=1750/22357 (7.83%) loss=0.600224 lr=0.00019247 elapsed=04:10 eta=02:35:20 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:41 step=1760/67071 (2.62%) epoch=1/3 epoch_step=1760/22357 (7.87%) loss=0.597168 lr=0.000194118 elapsed=04:11 eta=02:35:08 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:43 step=1770/67071 (2.64%) epoch=1/3 epoch_step=1770/22357 (7.92%) loss=0.593511 lr=0.000195772 elapsed=04:12 eta=02:34:55 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:44 step=1780/67071 (2.65%) epoch=1/3 epoch_step=1780/22357 (7.96%) loss=0.582942 lr=0.000197434 elapsed=04:13 eta=02:34:43 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:45 step=1790/67071 (2.67%) epoch=1/3 epoch_step=1790/22357 (8.01%) loss=0.596008 lr=0.000199103 elapsed=04:14 eta=02:34:31 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:47 step=1800/67071 (2.68%) epoch=1/3 epoch_step=1800/22357 (8.05%) loss=0.586695 lr=0.000200778 elapsed=04:17 eta=02:35:07 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:48 step=1810/67071 (2.70%) epoch=1/3 epoch_step=1810/22357 (8.10%) loss=0.599844 lr=0.000202461 elapsed=04:18 eta=02:34:55 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:49 step=1820/67071 (2.71%) epoch=1/3 epoch_step=1820/22357 (8.14%) loss=0.586171 lr=0.000204151 elapsed=04:19 eta=02:34:43 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:51 step=1830/67071 (2.73%) epoch=1/3 epoch_step=1830/22357 (8.19%) loss=0.590892 lr=0.000205848 elapsed=04:20 eta=02:34:33 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:52 step=1840/67071 (2.74%) epoch=1/3 epoch_step=1840/22357 (8.23%) loss=0.584708 lr=0.000207551 elapsed=04:21 eta=02:34:22 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:53 step=1850/67071 (2.76%) epoch=1/3 epoch_step=1850/22357 (8.27%) loss=0.590023 lr=0.000209262 elapsed=04:22 eta=02:34:10 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:54 step=1860/67071 (2.77%) epoch=1/3 epoch_step=1860/22357 (8.32%) loss=0.586264 lr=0.000210979 elapsed=04:24 eta=02:33:59 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:55 step=1870/67071 (2.79%) epoch=1/3 epoch_step=1870/22357 (8.36%) loss=0.581090 lr=0.000212703 elapsed=04:25 eta=02:33:48 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:56 step=1880/67071 (2.80%) epoch=1/3 epoch_step=1880/22357 (8.41%) loss=0.582611 lr=0.000214434 elapsed=04:26 eta=02:33:38 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:54:58 step=1890/67071 (2.82%) epoch=1/3 epoch_step=1890/22357 (8.45%) loss=0.590999 lr=0.000216171 elapsed=04:27 eta=02:33:28 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:00 step=1900/67071 (2.83%) epoch=1/3 epoch_step=1900/22357 (8.50%) loss=0.586354 lr=0.000217915 elapsed=04:30 eta=02:34:07 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:01 step=1910/67071 (2.85%) epoch=1/3 epoch_step=1910/22357 (8.54%) loss=0.600619 lr=0.000219666 elapsed=04:31 eta=02:33:58 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:02 step=1920/67071 (2.86%) epoch=1/3 epoch_step=1920/22357 (8.59%) loss=0.584331 lr=0.000221424 elapsed=04:32 eta=02:33:47 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:04 step=1930/67071 (2.88%) epoch=1/3 epoch_step=1930/22357 (8.63%) loss=0.592627 lr=0.000223188 elapsed=04:33 eta=02:33:37 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:05 step=1940/67071 (2.89%) epoch=1/3 epoch_step=1940/22357 (8.68%) loss=0.581252 lr=0.000224958 elapsed=04:34 eta=02:33:27 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:06 step=1950/67071 (2.91%) epoch=1/3 epoch_step=1950/22357 (8.72%) loss=0.577652 lr=0.000226735 elapsed=04:35 eta=02:33:18 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:07 step=1960/67071 (2.92%) epoch=1/3 epoch_step=1960/22357 (8.77%) loss=0.585065 lr=0.000228518 elapsed=04:37 eta=02:33:08 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:08 step=1970/67071 (2.94%) epoch=1/3 epoch_step=1970/22357 (8.81%) loss=0.569902 lr=0.000230308 elapsed=04:38 eta=02:32:58 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:09 step=1980/67071 (2.95%) epoch=1/3 epoch_step=1980/22357 (8.86%) loss=0.596738 lr=0.000232104 elapsed=04:39 eta=02:32:48 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:11 step=1990/67071 (2.97%) epoch=1/3 epoch_step=1990/22357 (8.90%) loss=0.583016 lr=0.000233907 elapsed=04:40 eta=02:32:48 val_mrr=0.790840
+[STAGE] 2026-04-23 00:55:12 val prep subsets global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:55:12 val prep negatives global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:55:12 val prep unique_entities=136107
+[STAGE] 2026-04-23 00:55:16 val prep entity_bank_ready unique_entities=136107 emb_dim=256
+[STAGE] 2026-04-23 00:55:16 val start step=2000 epoch=0 task=relation_ranking subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:55:16 val start step=2000 epoch=0 task=triple_scoring subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:55:17 val start step=2000 epoch=0 task=relation_ranking subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:55:17 val start step=2000 epoch=0 task=triple_scoring subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:55:17 val start step=2000 epoch=0 task=relation_ranking subset=art_any triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:55:17 val start step=2000 epoch=0 task=triple_scoring subset=art_any triples=50000 batches=98 eval_batch_size=512
+[VAL] 2026-04-23 00:55:18 step=2000 epoch=0 mrr=0.724276 aucpr=0.883965 art_art_mrr=0.393351 art_art_aucpr=0.601403 art_any_mrr=0.724286 art_any_aucpr=0.682449
+[TRAIN] 2026-04-23 00:55:19 step=2000/67071 (2.98%) epoch=1/3 epoch_step=2000/22357 (8.95%) loss=0.576788 lr=0.000235715 elapsed=04:48 eta=02:36:15 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:20 step=2010/67071 (3.00%) epoch=1/3 epoch_step=2010/22357 (8.99%) loss=0.590286 lr=0.00023753 elapsed=04:49 eta=02:36:05 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:21 step=2020/67071 (3.01%) epoch=1/3 epoch_step=2020/22357 (9.04%) loss=0.590141 lr=0.000239351 elapsed=04:51 eta=02:35:55 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:22 step=2030/67071 (3.03%) epoch=1/3 epoch_step=2030/22357 (9.08%) loss=0.577143 lr=0.000241179 elapsed=04:52 eta=02:35:45 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:23 step=2040/67071 (3.04%) epoch=1/3 epoch_step=2040/22357 (9.12%) loss=0.586602 lr=0.000243012 elapsed=04:53 eta=02:35:34 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:25 step=2050/67071 (3.06%) epoch=1/3 epoch_step=2050/22357 (9.17%) loss=0.587911 lr=0.000244852 elapsed=04:54 eta=02:35:23 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:26 step=2060/67071 (3.07%) epoch=1/3 epoch_step=2060/22357 (9.21%) loss=0.581459 lr=0.000246697 elapsed=04:55 eta=02:35:21 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:27 step=2070/67071 (3.09%) epoch=1/3 epoch_step=2070/22357 (9.26%) loss=0.585816 lr=0.000248549 elapsed=04:57 eta=02:35:11 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:28 step=2080/67071 (3.10%) epoch=1/3 epoch_step=2080/22357 (9.30%) loss=0.586842 lr=0.000250406 elapsed=04:58 eta=02:35:00 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:29 step=2090/67071 (3.12%) epoch=1/3 epoch_step=2090/22357 (9.35%) loss=0.588812 lr=0.00025227 elapsed=04:59 eta=02:34:51 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:31 step=2100/67071 (3.13%) epoch=1/3 epoch_step=2100/22357 (9.39%) loss=0.588026 lr=0.000254139 elapsed=05:01 eta=02:35:02 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:32 step=2110/67071 (3.15%) epoch=1/3 epoch_step=2110/22357 (9.44%) loss=0.589213 lr=0.000256014 elapsed=05:02 eta=02:34:54 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:34 step=2120/67071 (3.16%) epoch=1/3 epoch_step=2120/22357 (9.48%) loss=0.592909 lr=0.000257895 elapsed=05:03 eta=02:34:46 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:35 step=2130/67071 (3.18%) epoch=1/3 epoch_step=2130/22357 (9.53%) loss=0.587934 lr=0.000259782 elapsed=05:04 eta=02:34:37 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:36 step=2140/67071 (3.19%) epoch=1/3 epoch_step=2140/22357 (9.57%) loss=0.589944 lr=0.000261674 elapsed=05:05 eta=02:34:28 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:37 step=2150/67071 (3.21%) epoch=1/3 epoch_step=2150/22357 (9.62%) loss=0.590505 lr=0.000263572 elapsed=05:07 eta=02:34:27 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:39 step=2160/67071 (3.22%) epoch=1/3 epoch_step=2160/22357 (9.66%) loss=0.588911 lr=0.000265476 elapsed=05:08 eta=02:34:17 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:40 step=2170/67071 (3.24%) epoch=1/3 epoch_step=2170/22357 (9.71%) loss=0.581056 lr=0.000267385 elapsed=05:09 eta=02:34:08 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:41 step=2180/67071 (3.25%) epoch=1/3 epoch_step=2180/22357 (9.75%) loss=0.584402 lr=0.0002693 elapsed=05:10 eta=02:33:59 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:42 step=2190/67071 (3.27%) epoch=1/3 epoch_step=2190/22357 (9.80%) loss=0.577885 lr=0.00027122 elapsed=05:12 eta=02:33:50 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:44 step=2200/67071 (3.28%) epoch=1/3 epoch_step=2200/22357 (9.84%) loss=0.584486 lr=0.000273146 elapsed=05:14 eta=02:34:16 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:46 step=2210/67071 (3.30%) epoch=1/3 epoch_step=2210/22357 (9.89%) loss=0.585400 lr=0.000275077 elapsed=05:15 eta=02:34:07 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:47 step=2220/67071 (3.31%) epoch=1/3 epoch_step=2220/22357 (9.93%) loss=0.593375 lr=0.000277014 elapsed=05:16 eta=02:33:58 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:48 step=2230/67071 (3.32%) epoch=1/3 epoch_step=2230/22357 (9.97%) loss=0.578429 lr=0.000278956 elapsed=05:17 eta=02:33:49 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:49 step=2240/67071 (3.34%) epoch=1/3 epoch_step=2240/22357 (10.02%) loss=0.576005 lr=0.000280903 elapsed=05:19 eta=02:33:48 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:51 step=2250/67071 (3.35%) epoch=1/3 epoch_step=2250/22357 (10.06%) loss=0.585365 lr=0.000282855 elapsed=05:20 eta=02:33:39 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:52 step=2260/67071 (3.37%) epoch=1/3 epoch_step=2260/22357 (10.11%) loss=0.576627 lr=0.000284813 elapsed=05:21 eta=02:33:29 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:53 step=2270/67071 (3.38%) epoch=1/3 epoch_step=2270/22357 (10.15%) loss=0.573078 lr=0.000286776 elapsed=05:22 eta=02:33:20 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:54 step=2280/67071 (3.40%) epoch=1/3 epoch_step=2280/22357 (10.20%) loss=0.575484 lr=0.000288744 elapsed=05:23 eta=02:33:12 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:55 step=2290/67071 (3.41%) epoch=1/3 epoch_step=2290/22357 (10.24%) loss=0.572966 lr=0.000290717 elapsed=05:25 eta=02:33:05 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:58 step=2300/67071 (3.43%) epoch=1/3 epoch_step=2300/22357 (10.29%) loss=0.573167 lr=0.000292695 elapsed=05:27 eta=02:33:29 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:55:59 step=2310/67071 (3.44%) epoch=1/3 epoch_step=2310/22357 (10.33%) loss=0.577861 lr=0.000294678 elapsed=05:28 eta=02:33:20 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:00 step=2320/67071 (3.46%) epoch=1/3 epoch_step=2320/22357 (10.38%) loss=0.565149 lr=0.000296666 elapsed=05:29 eta=02:33:11 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:01 step=2330/67071 (3.47%) epoch=1/3 epoch_step=2330/22357 (10.42%) loss=0.586366 lr=0.000298659 elapsed=05:30 eta=02:33:03 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:03 step=2340/67071 (3.49%) epoch=1/3 epoch_step=2340/22357 (10.47%) loss=0.574829 lr=0.000300656 elapsed=05:32 eta=02:33:05 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:04 step=2350/67071 (3.50%) epoch=1/3 epoch_step=2350/22357 (10.51%) loss=0.571471 lr=0.000302659 elapsed=05:33 eta=02:32:57 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:05 step=2360/67071 (3.52%) epoch=1/3 epoch_step=2360/22357 (10.56%) loss=0.575071 lr=0.000304666 elapsed=05:34 eta=02:32:50 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:06 step=2370/67071 (3.53%) epoch=1/3 epoch_step=2370/22357 (10.60%) loss=0.578630 lr=0.000306678 elapsed=05:36 eta=02:32:41 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:07 step=2380/67071 (3.55%) epoch=1/3 epoch_step=2380/22357 (10.65%) loss=0.579746 lr=0.000308695 elapsed=05:37 eta=02:32:33 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:09 step=2390/67071 (3.56%) epoch=1/3 epoch_step=2390/22357 (10.69%) loss=0.572685 lr=0.000310716 elapsed=05:38 eta=02:32:26 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:11 step=2400/67071 (3.58%) epoch=1/3 epoch_step=2400/22357 (10.73%) loss=0.583245 lr=0.000312742 elapsed=05:40 eta=02:32:49 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:12 step=2410/67071 (3.59%) epoch=1/3 epoch_step=2410/22357 (10.78%) loss=0.589515 lr=0.000314773 elapsed=05:41 eta=02:32:41 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:13 step=2420/67071 (3.61%) epoch=1/3 epoch_step=2420/22357 (10.82%) loss=0.583470 lr=0.000316808 elapsed=05:43 eta=02:32:33 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:15 step=2430/67071 (3.62%) epoch=1/3 epoch_step=2430/22357 (10.87%) loss=0.579530 lr=0.000318847 elapsed=05:44 eta=02:32:33 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:16 step=2440/67071 (3.64%) epoch=1/3 epoch_step=2440/22357 (10.91%) loss=0.572582 lr=0.000320891 elapsed=05:45 eta=02:32:26 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:17 step=2450/67071 (3.65%) epoch=1/3 epoch_step=2450/22357 (10.96%) loss=0.584305 lr=0.000322939 elapsed=05:46 eta=02:32:19 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:18 step=2460/67071 (3.67%) epoch=1/3 epoch_step=2460/22357 (11.00%) loss=0.581130 lr=0.000324992 elapsed=05:48 eta=02:32:11 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:19 step=2470/67071 (3.68%) epoch=1/3 epoch_step=2470/22357 (11.05%) loss=0.586030 lr=0.000327049 elapsed=05:49 eta=02:32:03 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:21 step=2480/67071 (3.70%) epoch=1/3 epoch_step=2480/22357 (11.09%) loss=0.587034 lr=0.00032911 elapsed=05:50 eta=02:31:58 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:22 step=2490/67071 (3.71%) epoch=1/3 epoch_step=2490/22357 (11.14%) loss=0.576344 lr=0.000331175 elapsed=05:51 eta=02:31:52 val_mrr=0.790840
+[STAGE] 2026-04-23 00:56:23 val prep subsets global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:56:23 val prep negatives global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:56:23 val prep unique_entities=136236
+[STAGE] 2026-04-23 00:56:27 val prep entity_bank_ready unique_entities=136236 emb_dim=256
+[STAGE] 2026-04-23 00:56:27 val start step=2500 epoch=0 task=relation_ranking subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:56:27 val start step=2500 epoch=0 task=triple_scoring subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:56:27 val start step=2500 epoch=0 task=relation_ranking subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:56:28 val start step=2500 epoch=0 task=triple_scoring subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:56:28 val start step=2500 epoch=0 task=relation_ranking subset=art_any triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:56:28 val start step=2500 epoch=0 task=triple_scoring subset=art_any triples=50000 batches=98 eval_batch_size=512
+[VAL] 2026-04-23 00:56:29 step=2500 epoch=0 mrr=0.645758 aucpr=0.877515 art_art_mrr=0.343712 art_art_aucpr=0.591362 art_any_mrr=0.645778 art_any_aucpr=0.677464
+[TRAIN] 2026-04-23 00:56:30 step=2500/67071 (3.73%) epoch=1/3 epoch_step=2500/22357 (11.18%) loss=0.586957 lr=0.000333244 elapsed=05:59 eta=02:34:35 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:31 step=2510/67071 (3.74%) epoch=1/3 epoch_step=2510/22357 (11.23%) loss=0.578102 lr=0.000335318 elapsed=06:01 eta=02:34:33 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:32 step=2520/67071 (3.76%) epoch=1/3 epoch_step=2520/22357 (11.27%) loss=0.582759 lr=0.000337395 elapsed=06:02 eta=02:34:24 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:33 step=2530/67071 (3.77%) epoch=1/3 epoch_step=2530/22357 (11.32%) loss=0.574013 lr=0.000339477 elapsed=06:03 eta=02:34:15 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:35 step=2540/67071 (3.79%) epoch=1/3 epoch_step=2540/22357 (11.36%) loss=0.575387 lr=0.000341562 elapsed=06:04 eta=02:34:07 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:36 step=2550/67071 (3.80%) epoch=1/3 epoch_step=2550/22357 (11.41%) loss=0.568136 lr=0.000343652 elapsed=06:05 eta=02:33:59 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:37 step=2560/67071 (3.82%) epoch=1/3 epoch_step=2560/22357 (11.45%) loss=0.570553 lr=0.000345745 elapsed=06:06 eta=02:33:52 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:38 step=2570/67071 (3.83%) epoch=1/3 epoch_step=2570/22357 (11.50%) loss=0.572910 lr=0.000347842 elapsed=06:08 eta=02:33:44 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:39 step=2580/67071 (3.85%) epoch=1/3 epoch_step=2580/22357 (11.54%) loss=0.583785 lr=0.000349943 elapsed=06:09 eta=02:33:36 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:40 step=2590/67071 (3.86%) epoch=1/3 epoch_step=2590/22357 (11.58%) loss=0.579771 lr=0.000352048 elapsed=06:10 eta=02:33:29 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:43 step=2600/67071 (3.88%) epoch=1/3 epoch_step=2600/22357 (11.63%) loss=0.579421 lr=0.000354156 elapsed=06:13 eta=02:33:57 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:44 step=2610/67071 (3.89%) epoch=1/3 epoch_step=2610/22357 (11.67%) loss=0.571118 lr=0.000356268 elapsed=06:14 eta=02:33:50 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:45 step=2620/67071 (3.91%) epoch=1/3 epoch_step=2620/22357 (11.72%) loss=0.582877 lr=0.000358384 elapsed=06:15 eta=02:33:43 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:47 step=2630/67071 (3.92%) epoch=1/3 epoch_step=2630/22357 (11.76%) loss=0.570124 lr=0.000360503 elapsed=06:16 eta=02:33:36 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:48 step=2640/67071 (3.94%) epoch=1/3 epoch_step=2640/22357 (11.81%) loss=0.570442 lr=0.000362626 elapsed=06:17 eta=02:33:29 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:49 step=2650/67071 (3.95%) epoch=1/3 epoch_step=2650/22357 (11.85%) loss=0.585435 lr=0.000364752 elapsed=06:18 eta=02:33:21 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:50 step=2660/67071 (3.97%) epoch=1/3 epoch_step=2660/22357 (11.90%) loss=0.570350 lr=0.000366881 elapsed=06:20 eta=02:33:13 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:51 step=2670/67071 (3.98%) epoch=1/3 epoch_step=2670/22357 (11.94%) loss=0.579364 lr=0.000369014 elapsed=06:21 eta=02:33:05 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:53 step=2680/67071 (4.00%) epoch=1/3 epoch_step=2680/22357 (11.99%) loss=0.587264 lr=0.00037115 elapsed=06:22 eta=02:32:57 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:54 step=2690/67071 (4.01%) epoch=1/3 epoch_step=2690/22357 (12.03%) loss=0.570883 lr=0.00037329 elapsed=06:23 eta=02:32:56 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:56 step=2700/67071 (4.03%) epoch=1/3 epoch_step=2700/22357 (12.08%) loss=0.570692 lr=0.000375432 elapsed=06:26 eta=02:33:15 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:57 step=2710/67071 (4.04%) epoch=1/3 epoch_step=2710/22357 (12.12%) loss=0.568994 lr=0.000377578 elapsed=06:27 eta=02:33:07 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:56:59 step=2720/67071 (4.06%) epoch=1/3 epoch_step=2720/22357 (12.17%) loss=0.580235 lr=0.000379727 elapsed=06:28 eta=02:32:59 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:00 step=2730/67071 (4.07%) epoch=1/3 epoch_step=2730/22357 (12.21%) loss=0.573027 lr=0.000381879 elapsed=06:29 eta=02:32:51 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:01 step=2740/67071 (4.09%) epoch=1/3 epoch_step=2740/22357 (12.26%) loss=0.575916 lr=0.000384034 elapsed=06:30 eta=02:32:44 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:02 step=2750/67071 (4.10%) epoch=1/3 epoch_step=2750/22357 (12.30%) loss=0.572041 lr=0.000386192 elapsed=06:31 eta=02:32:36 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:03 step=2760/67071 (4.12%) epoch=1/3 epoch_step=2760/22357 (12.35%) loss=0.567410 lr=0.000388353 elapsed=06:33 eta=02:32:28 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:04 step=2770/67071 (4.13%) epoch=1/3 epoch_step=2770/22357 (12.39%) loss=0.570019 lr=0.000390517 elapsed=06:34 eta=02:32:19 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:06 step=2780/67071 (4.14%) epoch=1/3 epoch_step=2780/22357 (12.43%) loss=0.567188 lr=0.000392684 elapsed=06:35 eta=02:32:19 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:07 step=2790/67071 (4.16%) epoch=1/3 epoch_step=2790/22357 (12.48%) loss=0.570168 lr=0.000394853 elapsed=06:36 eta=02:32:12 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:09 step=2800/67071 (4.17%) epoch=1/3 epoch_step=2800/22357 (12.52%) loss=0.570194 lr=0.000397025 elapsed=06:39 eta=02:32:32 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:10 step=2810/67071 (4.19%) epoch=1/3 epoch_step=2810/22357 (12.57%) loss=0.576874 lr=0.0003992 elapsed=06:40 eta=02:32:25 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:12 step=2820/67071 (4.20%) epoch=1/3 epoch_step=2820/22357 (12.61%) loss=0.570070 lr=0.000401378 elapsed=06:41 eta=02:32:17 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:13 step=2830/67071 (4.22%) epoch=1/3 epoch_step=2830/22357 (12.66%) loss=0.567869 lr=0.000403558 elapsed=06:42 eta=02:32:10 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:14 step=2840/67071 (4.23%) epoch=1/3 epoch_step=2840/22357 (12.70%) loss=0.573420 lr=0.000405741 elapsed=06:43 eta=02:32:04 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:15 step=2850/67071 (4.25%) epoch=1/3 epoch_step=2850/22357 (12.75%) loss=0.568226 lr=0.000407926 elapsed=06:45 eta=02:31:56 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:17 step=2860/67071 (4.26%) epoch=1/3 epoch_step=2860/22357 (12.79%) loss=0.571911 lr=0.000410114 elapsed=06:46 eta=02:31:55 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:18 step=2870/67071 (4.28%) epoch=1/3 epoch_step=2870/22357 (12.84%) loss=0.577557 lr=0.000412304 elapsed=06:47 eta=02:31:47 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:19 step=2880/67071 (4.29%) epoch=1/3 epoch_step=2880/22357 (12.88%) loss=0.574775 lr=0.000414496 elapsed=06:48 eta=02:31:40 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:20 step=2890/67071 (4.31%) epoch=1/3 epoch_step=2890/22357 (12.93%) loss=0.575146 lr=0.000416691 elapsed=06:49 eta=02:31:33 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:22 step=2900/67071 (4.32%) epoch=1/3 epoch_step=2900/22357 (12.97%) loss=0.573043 lr=0.000418888 elapsed=06:52 eta=02:31:53 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:24 step=2910/67071 (4.34%) epoch=1/3 epoch_step=2910/22357 (13.02%) loss=0.578049 lr=0.000421088 elapsed=06:53 eta=02:31:46 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:25 step=2920/67071 (4.35%) epoch=1/3 epoch_step=2920/22357 (13.06%) loss=0.563971 lr=0.000423289 elapsed=06:54 eta=02:31:38 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:26 step=2930/67071 (4.37%) epoch=1/3 epoch_step=2930/22357 (13.11%) loss=0.579045 lr=0.000425493 elapsed=06:55 eta=02:31:31 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:27 step=2940/67071 (4.38%) epoch=1/3 epoch_step=2940/22357 (13.15%) loss=0.573211 lr=0.000427698 elapsed=06:56 eta=02:31:25 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:28 step=2950/67071 (4.40%) epoch=1/3 epoch_step=2950/22357 (13.19%) loss=0.561394 lr=0.000429906 elapsed=06:58 eta=02:31:18 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:30 step=2960/67071 (4.41%) epoch=1/3 epoch_step=2960/22357 (13.24%) loss=0.573306 lr=0.000432116 elapsed=06:59 eta=02:31:18 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:31 step=2970/67071 (4.43%) epoch=1/3 epoch_step=2970/22357 (13.28%) loss=0.569248 lr=0.000434327 elapsed=07:00 eta=02:31:11 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:32 step=2980/67071 (4.44%) epoch=1/3 epoch_step=2980/22357 (13.33%) loss=0.583388 lr=0.000436541 elapsed=07:01 eta=02:31:04 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:33 step=2990/67071 (4.46%) epoch=1/3 epoch_step=2990/22357 (13.37%) loss=0.576106 lr=0.000438756 elapsed=07:03 eta=02:30:57 val_mrr=0.790840
+[STAGE] 2026-04-23 00:57:34 val prep subsets global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:57:35 val prep negatives global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:57:35 val prep unique_entities=136072
+[STAGE] 2026-04-23 00:57:38 val prep entity_bank_ready unique_entities=136072 emb_dim=256
+[STAGE] 2026-04-23 00:57:38 val start step=3000 epoch=0 task=relation_ranking subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:57:39 val start step=3000 epoch=0 task=triple_scoring subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:57:39 val start step=3000 epoch=0 task=relation_ranking subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:57:39 val start step=3000 epoch=0 task=triple_scoring subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:57:39 val start step=3000 epoch=0 task=relation_ranking subset=art_any triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:57:40 val start step=3000 epoch=0 task=triple_scoring subset=art_any triples=50000 batches=98 eval_batch_size=512
+[VAL] 2026-04-23 00:57:40 step=3000 epoch=0 mrr=0.645022 aucpr=0.878086 art_art_mrr=0.349136 art_art_aucpr=0.602223 art_any_mrr=0.645042 art_any_aucpr=0.674865
+[TRAIN] 2026-04-23 00:57:41 step=3000/67071 (4.47%) epoch=1/3 epoch_step=3000/22357 (13.42%) loss=0.574701 lr=0.000440973 elapsed=07:10 eta=02:33:13 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:42 step=3010/67071 (4.49%) epoch=1/3 epoch_step=3010/22357 (13.46%) loss=0.569216 lr=0.000443192 elapsed=07:12 eta=02:33:07 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:43 step=3020/67071 (4.50%) epoch=1/3 epoch_step=3020/22357 (13.51%) loss=0.565897 lr=0.000445412 elapsed=07:13 eta=02:33:01 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:45 step=3030/67071 (4.52%) epoch=1/3 epoch_step=3030/22357 (13.55%) loss=0.566928 lr=0.000447634 elapsed=07:14 eta=02:33:00 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:46 step=3040/67071 (4.53%) epoch=1/3 epoch_step=3040/22357 (13.60%) loss=0.576804 lr=0.000449858 elapsed=07:16 eta=02:32:53 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:47 step=3050/67071 (4.55%) epoch=1/3 epoch_step=3050/22357 (13.64%) loss=0.578265 lr=0.000452083 elapsed=07:17 eta=02:32:47 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:48 step=3060/67071 (4.56%) epoch=1/3 epoch_step=3060/22357 (13.69%) loss=0.567125 lr=0.00045431 elapsed=07:18 eta=02:32:40 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:50 step=3070/67071 (4.58%) epoch=1/3 epoch_step=3070/22357 (13.73%) loss=0.573451 lr=0.000456538 elapsed=07:19 eta=02:32:33 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:51 step=3080/67071 (4.59%) epoch=1/3 epoch_step=3080/22357 (13.78%) loss=0.572427 lr=0.000458768 elapsed=07:20 eta=02:32:29 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:52 step=3090/67071 (4.61%) epoch=1/3 epoch_step=3090/22357 (13.82%) loss=0.575378 lr=0.000460999 elapsed=07:22 eta=02:32:23 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:55 step=3100/67071 (4.62%) epoch=1/3 epoch_step=3100/22357 (13.87%) loss=0.577901 lr=0.000463231 elapsed=07:24 eta=02:32:42 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:56 step=3110/67071 (4.64%) epoch=1/3 epoch_step=3110/22357 (13.91%) loss=0.582567 lr=0.000465465 elapsed=07:25 eta=02:32:37 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:57 step=3120/67071 (4.65%) epoch=1/3 epoch_step=3120/22357 (13.96%) loss=0.582287 lr=0.000467699 elapsed=07:27 eta=02:32:37 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:57:59 step=3130/67071 (4.67%) epoch=1/3 epoch_step=3130/22357 (14.00%) loss=0.569694 lr=0.000469935 elapsed=07:28 eta=02:32:31 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:00 step=3140/67071 (4.68%) epoch=1/3 epoch_step=3140/22357 (14.04%) loss=0.582152 lr=0.000472172 elapsed=07:29 eta=02:32:24 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:01 step=3150/67071 (4.70%) epoch=1/3 epoch_step=3150/22357 (14.09%) loss=0.563454 lr=0.00047441 elapsed=07:30 eta=02:32:17 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:02 step=3160/67071 (4.71%) epoch=1/3 epoch_step=3160/22357 (14.13%) loss=0.564541 lr=0.000476649 elapsed=07:31 eta=02:32:11 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:03 step=3170/67071 (4.73%) epoch=1/3 epoch_step=3170/22357 (14.18%) loss=0.573407 lr=0.000478889 elapsed=07:33 eta=02:32:05 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:04 step=3180/67071 (4.74%) epoch=1/3 epoch_step=3180/22357 (14.22%) loss=0.567595 lr=0.00048113 elapsed=07:34 eta=02:31:58 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:06 step=3190/67071 (4.76%) epoch=1/3 epoch_step=3190/22357 (14.27%) loss=0.553058 lr=0.000483371 elapsed=07:35 eta=02:31:52 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:08 step=3200/67071 (4.77%) epoch=1/3 epoch_step=3200/22357 (14.31%) loss=0.578189 lr=0.000485614 elapsed=07:37 eta=02:32:08 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:09 step=3210/67071 (4.79%) epoch=1/3 epoch_step=3210/22357 (14.36%) loss=0.563533 lr=0.000487857 elapsed=07:39 eta=02:32:07 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:11 step=3220/67071 (4.80%) epoch=1/3 epoch_step=3220/22357 (14.40%) loss=0.571511 lr=0.000490101 elapsed=07:40 eta=02:32:01 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:12 step=3230/67071 (4.82%) epoch=1/3 epoch_step=3230/22357 (14.45%) loss=0.571392 lr=0.000492346 elapsed=07:41 eta=02:31:55 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:13 step=3240/67071 (4.83%) epoch=1/3 epoch_step=3240/22357 (14.49%) loss=0.578248 lr=0.000494591 elapsed=07:42 eta=02:31:48 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:14 step=3250/67071 (4.85%) epoch=1/3 epoch_step=3250/22357 (14.54%) loss=0.574746 lr=0.000496837 elapsed=07:44 eta=02:31:42 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:15 step=3260/67071 (4.86%) epoch=1/3 epoch_step=3260/22357 (14.58%) loss=0.562493 lr=0.000499083 elapsed=07:45 eta=02:31:35 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:16 step=3270/67071 (4.88%) epoch=1/3 epoch_step=3270/22357 (14.63%) loss=0.577591 lr=0.00050133 elapsed=07:46 eta=02:31:28 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:18 step=3280/67071 (4.89%) epoch=1/3 epoch_step=3280/22357 (14.67%) loss=0.579400 lr=0.000503577 elapsed=07:47 eta=02:31:22 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:19 step=3290/67071 (4.91%) epoch=1/3 epoch_step=3290/22357 (14.72%) loss=0.576579 lr=0.000505824 elapsed=07:48 eta=02:31:16 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:21 step=3300/67071 (4.92%) epoch=1/3 epoch_step=3300/22357 (14.76%) loss=0.578836 lr=0.000508072 elapsed=07:51 eta=02:31:36 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:22 step=3310/67071 (4.94%) epoch=1/3 epoch_step=3310/22357 (14.81%) loss=0.563814 lr=0.00051032 elapsed=07:52 eta=02:31:29 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:24 step=3320/67071 (4.95%) epoch=1/3 epoch_step=3320/22357 (14.85%) loss=0.582085 lr=0.000512569 elapsed=07:53 eta=02:31:23 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:25 step=3330/67071 (4.96%) epoch=1/3 epoch_step=3330/22357 (14.89%) loss=0.567697 lr=0.000514817 elapsed=07:54 eta=02:31:18 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:26 step=3340/67071 (4.98%) epoch=1/3 epoch_step=3340/22357 (14.94%) loss=0.588282 lr=0.000517066 elapsed=07:55 eta=02:31:13 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:27 step=3350/67071 (4.99%) epoch=1/3 epoch_step=3350/22357 (14.98%) loss=0.566113 lr=0.000519314 elapsed=07:57 eta=02:31:07 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:28 step=3360/67071 (5.01%) epoch=1/3 epoch_step=3360/22357 (15.03%) loss=0.565441 lr=0.000521563 elapsed=07:58 eta=02:31:02 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:30 step=3370/67071 (5.02%) epoch=1/3 epoch_step=3370/22357 (15.07%) loss=0.552951 lr=0.000523811 elapsed=07:59 eta=02:30:55 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:31 step=3380/67071 (5.04%) epoch=1/3 epoch_step=3380/22357 (15.12%) loss=0.580257 lr=0.00052606 elapsed=08:00 eta=02:30:49 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:32 step=3390/67071 (5.05%) epoch=1/3 epoch_step=3390/22357 (15.16%) loss=0.568527 lr=0.000528308 elapsed=08:02 eta=02:30:47 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:34 step=3400/67071 (5.07%) epoch=1/3 epoch_step=3400/22357 (15.21%) loss=0.579500 lr=0.000530557 elapsed=08:04 eta=02:31:02 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:36 step=3410/67071 (5.08%) epoch=1/3 epoch_step=3410/22357 (15.25%) loss=0.573656 lr=0.000532805 elapsed=08:05 eta=02:30:56 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:37 step=3420/67071 (5.10%) epoch=1/3 epoch_step=3420/22357 (15.30%) loss=0.579742 lr=0.000535052 elapsed=08:06 eta=02:30:49 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:38 step=3430/67071 (5.11%) epoch=1/3 epoch_step=3430/22357 (15.34%) loss=0.572427 lr=0.0005373 elapsed=08:07 eta=02:30:43 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:39 step=3440/67071 (5.13%) epoch=1/3 epoch_step=3440/22357 (15.39%) loss=0.563456 lr=0.000539547 elapsed=08:09 eta=02:30:38 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:40 step=3450/67071 (5.14%) epoch=1/3 epoch_step=3450/22357 (15.43%) loss=0.582967 lr=0.000541793 elapsed=08:10 eta=02:30:32 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:41 step=3460/67071 (5.16%) epoch=1/3 epoch_step=3460/22357 (15.48%) loss=0.573237 lr=0.000544039 elapsed=08:11 eta=02:30:25 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:43 step=3470/67071 (5.17%) epoch=1/3 epoch_step=3470/22357 (15.52%) loss=0.569306 lr=0.000546285 elapsed=08:12 eta=02:30:19 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:44 step=3480/67071 (5.19%) epoch=1/3 epoch_step=3480/22357 (15.57%) loss=0.578351 lr=0.00054853 elapsed=08:13 eta=02:30:13 val_mrr=0.790840
+[TRAIN] 2026-04-23 00:58:45 step=3490/67071 (5.20%) epoch=1/3 epoch_step=3490/22357 (15.61%) loss=0.586362 lr=0.000550774 elapsed=08:15 eta=02:30:11 val_mrr=0.790840
+[STAGE] 2026-04-23 00:58:47 val prep subsets global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:58:47 val prep negatives global=50000 art_art=1986 art_any=50000
+[STAGE] 2026-04-23 00:58:47 val prep unique_entities=136083
+[STAGE] 2026-04-23 00:58:50 val prep entity_bank_ready unique_entities=136083 emb_dim=256
+[STAGE] 2026-04-23 00:58:50 val start step=3500 epoch=0 task=relation_ranking subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:58:51 val start step=3500 epoch=0 task=triple_scoring subset=global triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:58:51 val start step=3500 epoch=0 task=relation_ranking subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:58:51 val start step=3500 epoch=0 task=triple_scoring subset=art_art triples=1986 batches=4 eval_batch_size=512
+[STAGE] 2026-04-23 00:58:51 val start step=3500 epoch=0 task=relation_ranking subset=art_any triples=50000 batches=98 eval_batch_size=512
+[STAGE] 2026-04-23 00:58:52 val start step=3500 epoch=0 task=triple_scoring subset=art_any triples=50000 batches=98 eval_batch_size=512
+[VAL] 2026-04-23 00:58:52 step=3500 epoch=0 mrr=0.621969 aucpr=0.881341 art_art_mrr=0.328184 art_art_aucpr=0.583558 art_any_mrr=0.621989 art_any_aucpr=0.674252
+[STAGE] 2026-04-23 00:58:52 early stopping triggered at step=3500 epoch=0 no_improve_evals=5
+[TRAIN] 2026-04-23 00:58:53 step=3500/67071 (5.22%) epoch=1/3 epoch_step=3500/22357 (15.66%) loss=0.560618 lr=0.000553018 elapsed=08:23 eta=02:32:07 val_mrr=0.790840
+[STAGE] 2026-04-23 00:58:53 epoch completed epoch=1/3
+[STAGE] 2026-04-23 00:58:55 test prep subsets global=1425681 art_art=2083 art_any=357035
+[STAGE] 2026-04-23 00:58:58 test prep negatives global=1425681 art_art=2083 art_any=357035
+[STAGE] 2026-04-23 00:58:59 test prep unique_entities=1442129
+[STAGE] 2026-04-23 00:59:21 test prep entity_bank_ready unique_entities=1442129 emb_dim=256
+[STAGE] 2026-04-23 00:59:21 test start step=3500 epoch=1 task=relation_ranking subset=global triples=1425681 batches=2785 eval_batch_size=512
+[STAGE] 2026-04-23 00:59:45 test start step=3500 epoch=1 task=triple_scoring subset=global triples=1425681 batches=2785 eval_batch_size=512
+[STAGE] 2026-04-23 00:59:50 test start step=3500 epoch=1 task=relation_ranking subset=art_art triples=2083 batches=5 eval_batch_size=512
+[STAGE] 2026-04-23 00:59:51 test start step=3500 epoch=1 task=triple_scoring subset=art_art triples=2083 batches=5 eval_batch_size=512
+[STAGE] 2026-04-23 00:59:51 test start step=3500 epoch=1 task=relation_ranking subset=art_any triples=357035 batches=698 eval_batch_size=512
+[STAGE] 2026-04-23 00:59:56 test start step=3500 epoch=1 task=triple_scoring subset=art_any triples=357035 batches=698 eval_batch_size=512
+[TEST] 2026-04-23 00:59:58 step=3500 epoch=1 mrr=0.330950 aucpr=0.882604 art_art_mrr=0.336435 art_art_aucpr=0.586686 art_any_mrr=0.624775 art_any_aucpr=0.677427
+[STAGE] 2026-04-23 00:59:58 DONE train (567.28s)
+[RESULT] 2026-04-23 00:59:58 {"best_metric": 0.7908404842522793, "early_stopped": true, "stopped_epoch": 1, "stopped_step": 3500, "val_mrr": 0.6219691638500857, "val_hits1": 0.48884, "val_hits3": 0.73788, "val_hits10": 0.85802, "val_top1_acc": 0.48884, "val_auc": 0.9130666110000001, "val_aucpr": 0.8813411282890927, "val_art_art_mrr": 0.3281840555751395, "val_art_art_hits1": 0.23967774420946628, "val_art_art_hits3": 0.3766364551863041, "val_art_art_hits10": 0.4501510574018127, "val_art_art_top1_acc": 0.23967774420946628, "val_art_art_auc": 0.6293794730282167, "val_art_art_aucpr": 0.5835577398048317, "val_art_any_mrr": 0.6219890822174328, "val_art_any_hits1": 0.48886, "val_art_any_hits3": 0.7379, "val_art_any_hits10": 0.85804, "val_art_any_top1_acc": 0.48886, "val_art_any_auc": 0.7403904302, "val_art_any_aucpr": 0.674251692944445, "test_mrr": 0.3309499855964225, "test_hits1": 0.22534704467549194, "test_hits3": 0.38463232658638224, "test_hits10": 0.5252907207152231, "test_top1_acc": 0.22534704467549194, "test_auc": 0.9093403444136445, "test_aucpr": 0.882603636938697, "test_art_art_mrr": 0.3364353819917059, "test_art_art_hits1": 0.24051848295727316, "test_art_art_hits3": 0.3898223715794527, "test_art_art_hits10": 0.4723955832933269, "test_art_art_top1_acc": 0.24051848295727316, "test_art_art_auc": 0.6328300862271424, "test_art_art_aucpr": 0.5866862728776773, "test_art_any_mrr": 0.6247752617909393, "test_art_any_hits1": 0.4899323595725909, "test_art_any_hits3": 0.7436693881552229, "test_art_any_hits10": 0.8603498256473455, "test_art_any_top1_acc": 0.4899323595725909, "test_art_any_auc": 0.7426598417390222, "test_art_any_aucpr": 0.6774271598502517}

@@ -1,0 +1,97 @@
+﻿{
+    "experiment_name":  "mm_kge_complex_bert_resnet18_scratch_trainable",
+    "seed":  42,
+    "device":  "auto",
+    "paths":  {
+                  "graph_dir":  "../../database_operations/full_graph_export",
+                  "text_dir":  "../../database_operations/full_graph_export/text_chunks",
+                  "image_dir":  "../../images/64",
+                  "cache_dir":  "../cache",
+                  "runs_dir":  "../runs",
+                  "local_model_root":  "../../link_prediction_experiments/local_models"
+              },
+    "model":  {
+                  "use_text":  true,
+                  "use_image":  true,
+                  "use_graph":  true,
+                  "text_encoder":  "bert_frozen",
+                  "image_encoder":  "resnet18",
+                  "graph_encoder":  "graphsage",
+                  "fusion":  "mlp_concat",
+                  "kge_scorer":  "complex",
+                  "bert_model":  "bert-base-uncased",
+                  "image_model":  "resnet18",
+                  "text_max_length":  512,
+                  "text_batch_size":  32,
+                  "image_size":  224,
+                  "image_forward_batch_size":  32,
+                  "resnet_pretrained":  false,
+                  "freeze_image_backbone":  false,
+                  "text_proj_dim":  128,
+                  "image_proj_dim":  128,
+                  "fusion_hidden_dim":  256,
+                  "fusion_out_dim":  256,
+                  "kge_dim":  256,
+                  "dropout":  0.1,
+                  "graphsage_hidden_dim":  256,
+                  "graphsage_layers":  2,
+                  "graphsage_dropout":  0.1
+              },
+    "text_cache":  {
+                       "dtype":  "float16",
+                       "lru_chunks":  8
+                   },
+    "image_cache":  {
+                        "dtype":  "float16",
+                        "lru_chunks":  4,
+                        "enabled":  true
+                    },
+    "data":  {
+                 "train_ratio":  0.8,
+                 "val_ratio":  0.1,
+                 "test_ratio":  0.1,
+                 "batch_size":  512,
+                 "num_neg":  1,
+                 "relation_stratified":  true,
+                 "rare_relation_min_count":  5,
+                 "eval_batch_size":  128,
+                 "num_hops":  2,
+                 "num_neighbors":  [
+                                       8,
+                                       3
+                                   ],
+                 "max_subgraph_nodes":  6400,
+                 "max_image_nodes":  500
+             },
+    "optim":  {
+                  "lr":  0.001,
+                  "weight_decay":  0.0001,
+                  "epochs":  3,
+                  "max_steps":  0,
+                  "scheduler":  "onecycle",
+                  "early_stopping_patience":  10,
+                  "early_stopping_min_delta":  0.0
+              },
+    "eval":  {
+                 "eval_every_steps":  500,
+                 "val_max_triples":  500000,
+                 "test_max_triples":  0,
+                 "relation_topk":  10
+             },
+    "logging":  {
+                    "save_every_steps":  100,
+                    "best_metric":  "val_mrr"
+                },
+    "dataloader":  {
+                       "image_decode_workers":  2,
+                       "image_index_lru":  128,
+                       "verbose_data":  true
+                   },
+    "runtime":  {
+                    "amp_enabled":  false,
+                    "amp_dtype":  "float16",
+                    "pin_memory":  false,
+                    "non_blocking_transfer":  false,
+                    "stage_progress_sec":  30
+                }
+}

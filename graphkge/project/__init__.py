@@ -1,0 +1,2 @@
+"""Standalone multimodal KGE package."""
+

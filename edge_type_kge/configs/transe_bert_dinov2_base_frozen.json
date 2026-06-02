@@ -1,0 +1,87 @@
+{
+  "experiment_name": "mm_kge_transe_bert_dinov2_base_frozen",
+  "seed": 42,
+  "device": "cuda",
+  "paths": {
+    "graph_dir": "../../操作数据库/full_graph_export",
+    "text_dir": "../../操作数据库/full_graph_export/text_chunks",
+    "image_dir": "../../图片/64",
+    "cache_dir": "../cache",
+    "runs_dir": "../runs",
+    "local_model_root": "../../链路预测实验/local_models"
+  },
+  "model": {
+    "use_text": true,
+    "use_image": true,
+    "use_graph": false,
+    "text_encoder": "bert_frozen",
+    "image_encoder": "dinov2_base",
+    "graph_encoder": "none",
+    "fusion": "mlp_concat",
+    "kge_scorer": "transe",
+    "bert_model": "bert-base-uncased",
+    "image_model": "facebook/dinov2-base",
+    "text_max_length": 512,
+    "text_batch_size": 512,
+    "image_size": 224,
+    "image_forward_batch_size": 256,
+    "resnet_pretrained": true,
+    "freeze_image_backbone": true,
+    "text_proj_dim": 128,
+    "image_proj_dim": 128,
+    "fusion_hidden_dim": 256,
+    "fusion_out_dim": 256,
+    "kge_dim": 256,
+    "dropout": 0.1
+  },
+  "text_cache": {
+    "dtype": "float16",
+    "lru_chunks": 8
+  },
+  "image_cache": {
+    "dtype": "float16",
+    "lru_chunks": 4,
+    "enabled": true
+  },
+  "data": {
+    "train_ratio": 0.8,
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "batch_size": 512,
+    "num_neg": 1,
+    "relation_stratified": true,
+    "rare_relation_min_count": 5,
+    "eval_batch_size": 512
+  },
+  "optim": {
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "epochs": 3,
+    "max_steps": 0,
+    "scheduler": "onecycle",
+    "early_stopping_patience": 5,
+    "early_stopping_min_delta": 0.0
+  },
+  "eval": {
+    "eval_every_steps": 500,
+    "val_max_triples": 50000,
+    "test_max_triples": 0,
+    "relation_topk": 10
+  },
+  "logging": {
+    "save_every_steps": 100,
+    "best_metric": "val_mrr"
+  },
+  "dataloader": {
+    "image_decode_workers": 8,
+    "image_index_lru": 128,
+    "verbose_data": true
+  },
+  "runtime": {
+    "amp_enabled": false,
+    "amp_dtype": "float16",
+    "pin_memory": false,
+    "non_blocking_transfer": false,
+    "stage_progress_sec": 30
+  }
+}

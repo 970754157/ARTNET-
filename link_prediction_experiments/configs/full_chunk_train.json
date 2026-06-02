@@ -1,0 +1,110 @@
+﻿{
+    "experiment_name":  "mm_linkpred_neighbor_sample_intra",
+    "seed":  42,
+    "device":  "auto",
+    "paths":  {
+                  "graph_dir":  "../../database_operations/full_graph_export",
+                  "text_dir":  "../../database_operations/full_graph_export/text_chunks",
+                  "image_dir":  "../../images/64",
+                  "cache_dir":  "../cache",
+                  "runs_dir":  "../runs",
+                  "split_file":  "../cache/split_edges.pt",
+                  "adj_index_dir":  "../cache/adj_index",
+                  "text_cache_dir":  "../cache/text_emb"
+              },
+    "model":  {
+                  "text_encoder":  "bert_frozen",
+                  "image_encoder":  "resnet18",
+                  "fusion":  "mlp_concat",
+                  "gnn":  "graphsage",
+                  "predictor":  "mlp",
+                  "bert_model":  "bert-base-uncased",
+                  "text_max_length":  512,
+                  "text_batch_size":  32,
+                  "image_size":  224,
+                  "image_forward_batch_size":  32,
+                  "resnet_pretrained":  false,
+                  "fusion_out_dim":  256,
+                  "fusion_hidden_dim":  256,
+                  "graphsage_hidden_dim":  256,
+                  "graphsage_layers":  2,
+                  "graphsage_dropout":  0.1,
+                  "predictor_hidden_dim":  256,
+                  "text_proj_dim":  128,
+                  "image_proj_dim":  128
+              },
+    "index":  {
+                  "rebuild_index":  false,
+                  "adj_lru_chunks":  8
+              },
+    "text_cache":  {
+                       "dtype":  "float16",
+                       "lru_chunks":  8
+                   },
+    "data":  {
+                 "subgraph_mode":  "neighbor_sample",
+                 "chunk_context_mode":  "intra_only",
+                 "cross_chunk_neighbors_per_node":  3,
+                 "num_hops":  2,
+                 "num_neighbors":  [
+                                       8,
+                                       3
+                                   ],
+                 "batch_edges":  256,
+                 "max_subgraph_nodes":  6400,
+                 "max_image_nodes":  500,
+                 "num_neg":  1,
+                 "train_ratio":  0.8,
+                 "val_ratio":  0.1,
+                 "test_ratio":  0.1
+             },
+    "optim":  {
+                  "lr":  0.001,
+                  "weight_decay":  0.0001,
+                  "epochs":  50,
+                  "max_steps":  10000,
+                  "scheduler":  "onecycle",
+                  "early_stop_enabled":  true,
+                  "early_stop_patience":  10,
+                  "early_stop_min_delta":  0.0
+              },
+    "eval":  {
+                 "eval_every_steps":  30,
+                 "val_max_edges":  50000,
+                 "test_max_edges":  5000,
+                 "enable_hit10":  true,
+                 "hit10_negatives":  1000,
+                 "hit10_pos_limit":  100
+             },
+    "logging":  {
+                    "save_every_steps":  20,
+                    "best_metric":  "val_aucpr",
+                    "loss_window":  200,
+                    "chunk_block_steps":  1
+                },
+    "dataloader":  {
+                       "num_workers":  2
+                   },
+    "runtime":  {
+                    "amp_enabled":  true,
+                    "amp_dtype":  "float16",
+                    "pin_memory":  true,
+                    "non_blocking_transfer":  true,
+                    "prefetch_batches":  2,
+                    "cpu_threads":  0,
+                    "cudnn_benchmark":  true,
+                    "auto_tune":  true,
+                    "heartbeat_sec":  60,
+                    "log_first_n_steps":  5,
+                    "log_every_steps":  10,
+                    "stage_progress_sec":  30,
+                    "step_progress_sec":  30,
+                    "step_phase_start_end_logs":  true,
+                    "step_progress_min_items":  1,
+                    "max_loader_workers":  32,
+                    "max_prefetch_batches":  8,
+                    "max_text_batch_size":  256,
+                    "max_image_forward_batch_size":  256,
+                    "max_batch_edges_gpu":  3072
+                }
+}

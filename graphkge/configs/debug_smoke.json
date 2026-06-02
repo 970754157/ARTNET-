@@ -1,0 +1,94 @@
+{
+  "experiment_name": "graphkge_debug_pure_kge_compat",
+  "seed": 42,
+  "device": "cpu",
+  "paths": {
+    "graph_dir": "../../操作数据库/full_graph_export",
+    "text_dir": "../../操作数据库/full_graph_export/text_chunks",
+    "image_dir": "../../图片/64",
+    "cache_dir": "../cache",
+    "runs_dir": "../runs",
+    "local_model_root": "../../链路预测实验/local_models"
+  },
+  "model": {
+    "use_text": true,
+    "use_image": true,
+    "use_graph": false,
+    "text_encoder": "bert_frozen",
+    "image_encoder": "resnet50",
+    "graph_encoder": "none",
+    "fusion": "mlp_concat",
+    "kge_scorer": "transe",
+    "bert_model": "bert-base-uncased",
+    "image_model": "resnet50",
+    "text_max_length": 128,
+    "text_batch_size": 8,
+    "image_size": 224,
+    "image_forward_batch_size": 8,
+    "resnet_pretrained": true,
+    "freeze_image_backbone": true,
+    "text_proj_dim": 64,
+    "image_proj_dim": 64,
+    "fusion_hidden_dim": 128,
+    "fusion_out_dim": 128,
+    "graphsage_hidden_dim": 128,
+    "graphsage_layers": 2,
+    "graphsage_dropout": 0.1,
+    "kge_dim": 128,
+    "dropout": 0.1
+  },
+  "text_cache": {
+    "dtype": "float16",
+    "lru_chunks": 4
+  },
+  "image_cache": {
+    "dtype": "float16",
+    "lru_chunks": 2,
+    "enabled": true
+  },
+  "data": {
+    "train_ratio": 0.8,
+    "val_ratio": 0.1,
+    "test_ratio": 0.1,
+    "batch_size": 16,
+    "num_neg": 1,
+    "relation_stratified": true,
+    "rare_relation_min_count": 3,
+    "eval_batch_size": 16,
+    "num_hops": 2,
+    "num_neighbors": [8, 3],
+    "max_subgraph_nodes": 6400,
+    "max_image_nodes": 500
+  },
+  "optim": {
+    "lr": 0.001,
+    "weight_decay": 0.0,
+    "epochs": 1,
+    "max_steps": 2,
+    "scheduler": "none",
+    "early_stopping_patience": 0,
+    "early_stopping_min_delta": 0.0
+  },
+  "eval": {
+    "eval_every_steps": 1,
+    "val_max_triples": 32,
+    "test_max_triples": 32,
+    "relation_topk": 5
+  },
+  "logging": {
+    "save_every_steps": 1,
+    "best_metric": "val_mrr"
+  },
+  "dataloader": {
+    "image_decode_workers": 0,
+    "image_index_lru": 32,
+    "verbose_data": true
+  },
+  "runtime": {
+    "amp_enabled": false,
+    "amp_dtype": "float16",
+    "pin_memory": false,
+    "non_blocking_transfer": false,
+    "stage_progress_sec": 10
+  }
+}
