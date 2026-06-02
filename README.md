@@ -1,5 +1,11 @@
 # Multimodal Knowledge Graph Experiment Project
 
+## Full Database File
+
+The complete database file is available at:
+
+https://durhamuniversity-my.sharepoint.com/personal/hpgm94_durham_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fhpgm94%5Fdurham%5Fac%5Fuk%2FDocuments%2Fhpgm94%EF%BC%882%EF%BC%89%2Ezip&parent=%2Fpersonal%2Fhpgm94%5Fdurham%5Fac%5Fuk%2FDocuments&ct=1780424720150&or=OWA%2DNT%2DMail&cid=56ac6988%2D365a%2Dfc79%2D57df%2Dd4838614ca1a&ga=1
+
 This project focuses on knowledge graph data export, multimodal feature construction, knowledge graph embedding (KGE), and link prediction experiments. The overall workflow is:
 
 1. Export sharded graph data from a Neo4j graph database.
